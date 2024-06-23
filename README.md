@@ -2,23 +2,23 @@
 
 Dockerfile which allows to install [YARA](https://github.com/VirusTotal/yara) and [yara-python](https://github.com/VirusTotal/yara-python) in an Alpine Linux container.
 
-By default, YARA v4.4.0 and yara-python v4.4.0 will be installed.
+By default, YARA v4.5.1 and yara-python v4.5.1 will be installed.
 
-You may add YARA rules in the ```rules``` directory. These will be copied into the ```/root/rules``` directory of the container.
+You may add YARA rules in the ```rules``` directory. These will be copied into the ```${username}``` home directory of the container (default: ```/home/user/rules```).
 
 
-## Building a container for version v4.4.0
+## Building a container for version v4.5.1
 
-The following command will build a container for YARA v4.4.0:
+The following command will build a container for YARA v4.5.1:
 
 ```
-docker build -t yara-v4.4.0:v4.4.0 .
+docker build -t yara-v4.5.1:v4.5.1 .
 ```
 
 The container can then be run using the following command:
 
 ```
-docker run -v <path-to-samples>:/tmp/samples -it --rm yara-v4.4.0:v4.4.0
+docker run -v <path-to-samples>:/tmp/samples -it --rm yara-v4.5.1:v4.5.1
 ```
 
 
